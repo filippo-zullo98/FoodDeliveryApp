@@ -1,17 +1,46 @@
 # FoodDeliveryApp
-This open-source app is designed to assist delivery drivers who work for restaurants and bars. Its main features simplify their daily tasks, offering:
-- Instant Navigation with Maps:
-    Drivers can quickly access the customer's location on Google Maps (or other mapping services) by simply entering the customer's first and last name.
+1. Project Title
 
-- Daily Earnings Summary:
-    The app allows drivers to log the payment amount for each order. At the end of the day, it calculates the total earnings, providing a clear overview of the daily revenue and the number of completed deliveries.
+DeliveryMate - Open-Source App for Delivery Drivers
+2. Project Description
 
-- Client Order Tracking:
-    The app stores the order amounts linked to each customer, making it easy to keep track of payments throughout the day.
+    DeliveryMate is an open-source mobile application developed in Java, designed to simplify the daily operations of food delivery drivers. The app allows drivers to navigate easily to customer addresses, log order payments, and calculate daily earnings. With a focus on efficiency and user-friendliness, DeliveryMate aims to enhance the delivery experience for both drivers and restaurants.
 
-- User-Friendly Interface:
-        A clean and intuitive layout.
-        Quick access to features such as delivery logs, customer information, and earnings summary.
+3. Features
 
-- Offline Functionality:
-    Basic features remain accessible even without an internet connection, ensuring reliability in all conditions.
+    Navigation: Seamless integration with Google Maps for quick access to customer locations.
+    Order Logging: Record order amounts and associate them with customer names.
+    Earnings Summary: Automatically calculate daily earnings and track completed deliveries.
+    Database Management: Secure storage of data using MySQL.
+    Offline Functionality: Core features remain available without an active internet connection.
+
+4. Installation
+Requirements
+
+    Java Development Kit (JDK) 11 or higher
+    MySQL Server
+    IDE (e.g., IntelliJ IDEA, Eclipse, or Visual Studio Code with Java support)
+    Google Maps API Key
+
+Setup Instructions
+
+    1. Clone the repository:
+
+	git clone https://github.com/yourusername/deliverymate.git
+
+    2. Import the project into your Java IDE.
+    3. Set up the MySQL database:
+
+    	- Create a new MySQL database (e.g., deliverymate_db).
+       	- Import the provided SQL file (database/deliverymate_schema.sql) to initialize the schema.
+	- Update the application.properties file with your MySQL credentials:
+		spring.datasource.url=jdbc:mysql://localhost:3306/deliverymate_db
+		spring.datasource.username=your_mysql_username
+		spring.datasource.password=your_mysql_password
+
+    4. Configure the Google Maps API Key:
+	- Add your API key to the appropriate configuration file.
+    5. Build and run the application using Maven:
+	mvn clean install 
+	mvn spring-boot:run
+
